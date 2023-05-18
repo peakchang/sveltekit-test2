@@ -2,10 +2,10 @@ import mysql, { } from "mysql2"
 
 
 export const sql_con = mysql.createConnection({
-    host: process.env.HOST || '127.0.0.1',
+    host: import.meta.env.VITE_HOST || '127.0.0.1',
     user: 'root',
-    password: "rkwkrh13!#",
-    database: "testdb3"
+    password: import.meta.env.VITE_DBPWD,
+    database: import.meta.env.VITE_SHEMA
 })
 
 
